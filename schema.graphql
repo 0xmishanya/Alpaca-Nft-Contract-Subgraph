@@ -1,0 +1,52 @@
+type _ApprovalForAll @entity {
+  id: ID!
+  count: BigInt!
+  account: Bytes! # address
+  operator: Bytes! # address
+}
+
+type _BornSingle @entity {
+  id: ID!
+  count: BigInt!
+  gene: BigInt!
+  energy: BigInt!
+}
+
+type _EnergyChanged @entity {
+  id: ID!
+  count: BigInt!
+  oldEnergy: BigInt!
+  newEnergy: BigInt!
+}
+
+type _GrantedToBreed @entity {
+  id: ID!
+  count: BigInt!
+  alpacaId: BigInt!
+  addr: Bytes!
+}
+
+type _Hatched @entity {
+  id: ID!
+  count: BigInt!
+  eggId: BigInt!
+  matronId: BigInt!
+  sireId: BigInt!
+  cooldownEndBlock: BigInt!
+}
+
+type _OwnershipTransferred @entity {
+  id: ID!
+  count: BigInt!
+  previousOwner: Bytes!
+  newOwner: Bytes!
+}
+
+type _TransferSingle @entity {
+  id: ID!
+  count: BigInt!
+  operator: Bytes!
+  from: Bytes!
+  to: Bytes!
+  value: BigInt!
+}
